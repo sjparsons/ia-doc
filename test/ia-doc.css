@@ -2,47 +2,66 @@ h1.root
 {
 	width: 100%;
 	text-align: center;
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid #000;
 }
 li
 {
-	list-style: none;
-	padding: 5px 0px;
+	list-style-type: none;
+	padding: 5px 0;
+	background-repeat: no-repeat;
+	width: 150px;
+}
+ol 
+{
+	margin-left: 0;
+	padding-left: 0;
+}
+ol ol
+{
+	margin-top: 1em;
+	margin-left: 1.5em;
+}
+ol.horizontal li
+{
+	display: inline;
+	float: left;
+	padding-right: 10px;
+}
+ol.vertical li
+{
+	float: left;
+	clear: left;
 }
 #ia-doc ol
 {
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 }
-li.page
+.page
 {
 	background-image: url('imgs/page.png');
-	background-repeat: no-repeat;
 	line-height: 80px;
-	padding: 0 0 0 120px
+	padding: 0 0 0 0px
 }
-li.file
+.file
 {
 	background-image: url('imgs/file.png');
-	background-repeat: no-repeat;
 	line-height: 80px;
-	padding: 0 0 0 80px;
+	padding: 0 0 0 0px;
 }
-li.page-stack
+.page-stack
 {
 	background-image: url('imgs/stackedPages.png');
-	background-repeat: no-repeat;
 	line-height: 70px;
-	padding: 0 0 0 120px; 
+	padding: 0 0 0 0px; 
 }
-li.file-stack
+.file-stack
 {
 	background-image: url('imgs/stackedFiles.png');
-	background-repeat: no-repeat;
 	line-height: 60px;
-	padding: 0 0 0 80px;
+	padding: 0 0 0 0px;
 }
-li.continuation
+.continuation
 {
 
 }
