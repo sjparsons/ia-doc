@@ -5,41 +5,6 @@
 </head>
 
 <body>
-	
-	
-	<!--<h1 class="root">MyBSU</h1>
-	
-	<ol class="horizontal">
-		<li class="page">Item 1
-			<ol class="vertical">
-				<li class="file">page 1</li>
-				<li>page 2</li>
-				<li class="page-stack">page 3
-					<ol>
-						<li class="page">TEST</li>
-						<li class="file">TEST</li>
-					</ol>
-				</li>
-				<li>page 4</li>
-				<li>page 5</li>
-			</ol>
-		
-		</li>
-		<li class="page">Item 2
-			<ol class="vertical">
-				<li class="file">page A</li>
-				<li class="file-stack">page B</li>
-				<li>page C</li>
-				<li>page D</li>
-				<li>page E</li>
-			</ol>
-		</li>
-		<li class="page">Item 3
-			<ol class="vertical">
-				<li class="continuation">continue to site 2</li>
-			</ol>
-		</li>	
-	</ol>-->
 	<div id="container">
 		<ol class="sitemap">
 			<li class="page root"><a>My BSU</a>
@@ -81,89 +46,12 @@
 	</div>
 
 	<script src="jquery-1.7.2.js"></script>
+	<script src="iadoc.js"></script>
 	<script>
 
-        (function()         
-        {          
-
-        	formatting();
-
-		}) ();
-
-		function formatting()
-		{
-			//format the parent "branches"
-			var windowWidth = $(window).width();
-			var numBranches = 1.0 / $('li.parent').length;
-
-			var width = (numBranches * windowWidth) - 20;
-			$('li.parent').css({
-				'width' : width,
-				'margin' : '1px'
-			});
-			//format the "children"
-			$('li.page, li.file').not('.parent, .root').each(function(index)
-			{
-				var $this = $(this);
-				var parentWidth = $this.parent().width();
-				var numChild = $this.parent().children().length;
-				var newWidth = ((1.0 / numChild) * parentWidth) - 5;
-
-				$this.css({
-					'width' : newWidth,
-					'margin-left' : '1px'
-				});
-			});
-		}
-
-		/*function formatCurrent(startingElement, width)
-        	{
-        		var current = $(startingElement).children().children();
-        		var numCurrent = 1.0 / current.length;
-        		var width = (numCurrent * width) - 20;
-        		alert(current.text());
-        		current.each(function(index)
-        		{
-        			var $this = $(this);
-        			$this.css({
-        				'width' : width,
-        				'margin' : '1px'
-        			});
-        		});
-
-        		$('.file, .page').not('.parent, .root').each(function(index) 
-        		{	
-        			var parentWidth = parseInt($('.file, .page').not('.parent, .root').parent().css('width'));
-        			var numChildren = $(this).children().children().length;
-        			var newWidth = parentWidth / numChildren;
-
-        			$(this).css({
-        				'min-width' : width,
-	        			'margin-right' : '1px'
-        			});
-        		});
-        	}*/
-
-        	function createLine(x1,y1, x2,y2)
-        	{
-				var length = Math.sqrt((x1-x2)*(x1-x2) + (y1-y2)*(y1-y2));
-			    var angle  = Math.atan2(y2 - y1, x2 - x1) * 180 / Math.PI;
-			    var transform = 'rotate('+angle+'deg)';
-			    
-					var line = $('<div>')
-						.appendTo('#container')
-						.addClass('line')
-						.css({
-						  'position': 'absolute',
-						  '-webkit-transform':  transform,
-						  '-moz-transform':     transform,
-						  'transform':          transform
-					})
-				.width(length)
-				.offset({left: x1, top: y1});
-
-				return line;
-			}
+        formatting();
+        drawLines();
+        alert('test');
 		
 	</script>
 	
