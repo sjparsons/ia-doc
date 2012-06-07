@@ -1,67 +1,64 @@
-h1.root
+#container
 {
 	width: 100%;
-	text-align: center;
-	border-bottom: 1px solid #000;
+	height: 100%;
 }
+ol.sitemap>li:first-of-type
+{	
+	border: none;
+}
+.root
+{
+	text-align: center;
+	width: 100%;
+}
+li a
+{
+	display: block;
+}
+.parent
+{
+	background-color: skyblue;
+}
+.parent li
+{
+	margin-top: 30px
+}
+.stack {}
+.page {}
+.file {}
 li
 {
 	list-style-type: none;
-	padding: 5px 0;
+	padding: 5px 0 0 0;
 	background-repeat: no-repeat;
-	width: 150px;
+	border: 1px solid #000;
+	/*height: 25px;*/
+	border-radius: 7px;
+	background-color: white;
+	float: left;
+}
+li.parent, li.root {
+	/*height: 25px;*/
+}
+li:not(.parent, .root)
+{
+	min-height: 25px;
+}
+ol.sitemap ol
+{
+	width: 100%;
 }
 ol 
 {
 	margin-left: 0;
 	padding-left: 0;
 }
-ol ol
+div.line
 {
-	margin-top: 1em;
-	margin-left: 1.5em;
-}
-ol.horizontal li
-{
-	display: inline;
-	float: left;
-	padding-right: 10px;
-}
-ol.vertical li
-{
-	float: left;
-	clear: left;
-}
-#ia-doc ol
-{
-	margin: 0;
-	padding: 0;
-}
-.page
-{
-	background-image: url('imgs/page.png');
-	line-height: 80px;
-	padding: 0 0 0 0px
-}
-.file
-{
-	background-image: url('imgs/file.png');
-	line-height: 80px;
-	padding: 0 0 0 0px;
-}
-.page-stack
-{
-	background-image: url('imgs/stackedPages.png');
-	line-height: 70px;
-	padding: 0 0 0 0px; 
-}
-.file-stack
-{
-	background-image: url('imgs/stackedFiles.png');
-	line-height: 60px;
-	padding: 0 0 0 0px;
-}
-.continuation
-{
-
+	-webkit-transform-origin: 0 100%;
+       -moz-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+	height: 2px;
+	background: #000 ;
 }
