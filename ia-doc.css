@@ -2,7 +2,7 @@ li
 {
 	list-style: none;
 	padding: 5px 0;
-	width: 100%;
+	width: 90%;
 }
 a:link
 {
@@ -12,9 +12,10 @@ a:link
 a:visited { color: #000; }
 li a
 {
-	width: 100%;
+	/*width: 100%;*/
 	padding-left: 40px;
 	display: block;
+	height: 40px;
 	vertical-align: middle;
 }
 li a:hover
@@ -57,4 +58,19 @@ li a:hover
 	height: 30px;
 	line-height: 30px;
 }
+.continuation
+{
+	background-image: url('imgs/continue-left.svg'), url('imgs/continue-right.svg');
+	background-size: 30px 40px;
+	background-repeat: no-repeat;
+	background-position: left center, right center;
+	height: 30px;
+	line-height: 30px;
+	width: 140px; /*Need to figure out width on this element*/
+}
 ol { display: block; }
+div.conditional
+{
+	border: 1px dashed #000;
+	border-radius: 10px;
+}
