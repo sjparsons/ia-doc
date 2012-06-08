@@ -2,7 +2,13 @@ li
 {
 	list-style: none;
 	padding: 5px 0;
-	width: 90%;
+	width: auto;
+}
+a
+{
+	background-size: 30px 40px;
+	background-repeat: no-repeat;
+	background-position: left center;
 }
 a:link
 {
@@ -12,9 +18,8 @@ a:link
 a:visited { color: #000; }
 li a
 {
-	/*width: 100%;*/
 	padding-left: 40px;
-	display: block;
+	display: inline-block;
 	height: 40px;
 	vertical-align: middle;
 }
@@ -25,44 +30,30 @@ li a:hover
 .file
 {
 	background-image: url('imgs/file.svg');
-	background-size: 30px 40px;
-	background-repeat: no-repeat;
-	background-position: left center;
 	height: 30px;
 	line-height: 30px;
 }
 .page
 {
 	background-image: url('imgs/page.svg');
-	background-size: 30px 40px;
-	background-repeat: no-repeat;
-	background-position: left center;
 	height: 30px;
 	line-height: 30px;
 }
 .file-stack
 {
 	background-image: url('imgs/file-stack.svg');
-	background-size: 30px 40px;
-	background-repeat: no-repeat;
-	background-position: left center;
 	height: 30px;
 	line-height: 30px;
 }
 .page-stack
 {
 	background-image: url('imgs/page-stack.svg');
-	background-size: 30px 40px;
-	background-repeat: no-repeat;
-	background-position: left center;
 	height: 30px;
 	line-height: 30px;
 }
 .continuation
 {
 	background-image: url('imgs/continue-left.svg'), url('imgs/continue-right.svg');
-	background-size: 30px 40px;
-	background-repeat: no-repeat;
 	background-position: left center, right center;
 	height: 30px;
 	line-height: 30px;
@@ -72,5 +63,10 @@ ol { display: block; }
 div.conditional
 {
 	border: 1px dashed #000;
+	border-radius: 10px;
+}
+div.area
+{
+	border: 1px solid #000;
 	border-radius: 10px;
 }
