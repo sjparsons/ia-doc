@@ -60,13 +60,20 @@ li a:hover
 	width: 140px; /*Need to figure out width on this element*/
 }
 ol { display: block; }
-div.conditional
+.conditional
 {
 	border: 1px dashed #000;
 	border-radius: 10px;
 }
-div.area
+.area
 {
 	border: 1px solid #000;
 	border-radius: 10px;
+}
+.collapse
+{
+	cursor: default;
+	font-size: .7em;
+	height: .7em;
+	line-height: .7em;
 }
