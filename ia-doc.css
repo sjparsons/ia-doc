@@ -25,7 +25,7 @@ li a
 }
 li a:hover
 {
-	background-color: #F5F2F3;
+	background-color: #EDEDED;
 }
 .file
 {
@@ -77,3 +77,4 @@ ol { display: block; }
 	height: .7em;
 	line-height: .7em;
 }
+.collapse:hover { background-color: #EDEDED; }
