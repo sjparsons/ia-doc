@@ -75,10 +75,7 @@ ol { display: block; }
 	cursor: default;
 	font-size: .7em;
 	height: .7em;
-	line-height: .7em;
-<<<<<<< HEAD
 }
 .collapse:hover { background-color: #EDEDED; }
-=======
 }
->>>>>>> iadoc/master
+
