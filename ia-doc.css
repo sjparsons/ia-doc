@@ -2,7 +2,6 @@ li
 {
 	list-style: none;
 	padding: 5px 0;
-	width: auto;
 }
 a
 {
@@ -60,15 +59,16 @@ li a:hover
 	width: 140px; /*Need to figure out width on this element*/
 }
 ol { display: block; }
-.conditional
+.conditional_area
 {
+	border-radius: 20px;
 	border: 1px dashed #000;
 	border-radius: 10px;
 }
 .area
-{
+{	
+	border-radius: 20px;
 	border: 1px solid #000;
-	border-radius: 10px;
 }
 .collapse
 {
@@ -78,4 +78,3 @@ ol { display: block; }
 }
 .collapse:hover { background-color: #EDEDED; }
 }
-

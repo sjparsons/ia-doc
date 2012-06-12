@@ -29,11 +29,11 @@
 	$('span.collapse').on('click', function()
 	{
 		var $this = $(this);
-		
+
 		$this.parent().parent().siblings().children().children().children().toggle();	
 		$this.parent().siblings().children().children().toggle();
 		$this.parent().children().children().toggle();
 
-		//Ugly code, need to fix
+		//Ugly, need to fix
 
 	});
