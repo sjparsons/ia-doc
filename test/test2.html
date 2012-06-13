@@ -1,0 +1,78 @@
+<html>
+
+<head>
+	<LINK rel="stylesheet" type="text/css" href="ia-doc.css" />
+</head>
+
+<body>
+
+	<ol>
+		<li>
+			<a class ="page" href="">Root</a>
+			<ol>
+				<li><a class="page-stack" href="">Page Stack 1</a></li>
+			</ol>
+			<ol>
+				<li class="area"><a class="page" href="">Page 1</a>
+					<ol>
+						<li><a class="file" href="">File 2</a></li>
+						<li><a class="file" href="">File 3</a></li>
+					</ol>
+				</li>
+			</ol>
+			<ol>
+				<li><a class="file" href="">File 1</a>
+					<ol>
+						<li><a class="page" href="">Page 3</a></li>
+						<li><a class="page" href="">Page 4</a>
+							<ol>
+								<li><a class="continuation" href="">Page 5</a>
+									<ol>
+										<li><a class="page" href="">Testing</a></li>
+										<li class="conditional-area"><a class="page" href="">Testing</a>
+											<ol>
+												<li><a class="page" href="">Testing</a></li>
+												<li><a class="page" href="">Testing</a></li>
+												<li><a class="page" href="">Testing</a></li>
+											</ol>
+										</li>
+										<li  class="iterative-area"><a class="page" href="">Testing</a>
+											<ol>
+												<li><a class="page" href="">Testing</a></li>
+												<li><a class="page" href="">Testing</a></li>
+												<li><a class="page" href="">Testing</a></li>
+											</ol>
+										</li>
+										<li><a class="page" href="">Testing</a></li>
+									</ol>
+								</li>
+							</ol>
+						</li>
+					</ol>
+				</li>
+			</ol>
+			<ol>
+				<li><a class="file-stack" href="">File Stack 1</a></li>
+			</ol>
+			<ol>
+				<li><a class="page" href="">Page 2</a></li>
+			</ol>
+		</li>
+	</ol>
+
+	<ol>
+		<li>
+			<a class="continuation" href="">From Page 5</a>
+			<ol>
+				<li><a class="page" href="">Page 6</a></li>
+				<li><a class="file" href="">File 4</a></li>
+			</ol>
+		</li>
+	</ol>
+
+	<script src="jquery-1.7.2.js"></script>
+	<script src="iadoc.js"></script>
+	
+
+</body>
+</html>

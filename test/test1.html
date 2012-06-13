@@ -7,53 +7,52 @@
 <body>
 	<div id="container">
 		<ol class="sitemap">
-			<li class="page root"><a>My BSU</a>
+			<li>
+				<a class="page" href="">My BSU</a>
 				<ol>
-					<li a class="page parent"><a>Item 1</a>
+					<li><a a class="page" href="">Item 1</a>
 						<ol>
-							<li class="page"><a>Page 1</a></li>
-							<li class="file"><a>File 1</a></li>
+							<li><a class="page" href="">Page 1</a></li>
+							<li><a class="file" href="">File 1</a></li>
 						</ol>
 					</li>
 				</ol>
 				<ol>
-					<li class="page parent"><a>Item 2</a>
+					<li><a class="page" href="">Item 2</a>
 						<ol>
-							<li class="page stack"><a>Page Stack 1</a></li>
+							<li><a class="page-stack" href="">Page Stack 1</a></li>
 						</ol>
 					</li>
 				</ol>
-				<ol>
-					<li class="file parent"><a>Item 3</a>
-						<ol>
-							<li class="file stack"><a>File Stack 1</a></li>
-							<li class="page"><a>Page 2</a>
+				<ol class="conditional-area">
+					<li><a class="file" href="">Item 3</a>
+						<ol class="iterative-area">
+							<li><a class="file-stack" href="">File Stack 1</a>
+								<ol><li><a class="page" href="">TESTING</a></li></ol>
+							</li>
+							<li><a class="page parent" href="">Page 2</a>
 								<ol>
-									<li class="page"><a>Page</a></li>
+									<li><a class="page" href="">Page</a></li>
 								</ol>
 							</li>
-							<li class="file"><a>File 2</a></li>
+							<li><a class="file" href="">File 2</a></li>
 						</ol>
 					</li>
 				</ol>
-				<ol>
-					<li class="page parent"><a>Item 4</a>
-
+				<ol class="area">
+					<li><a class="page" href="">Item 4</a>
+						<ol>
+							<li><a class="continuation" href="">Go to Item 5</a></li>
+						</ol>
 					</li>
 				</ol>
 			</li>
 		</ol>
 	</div>
 
+
 	<script src="jquery-1.7.2.js"></script>
 	<script src="iadoc.js"></script>
-	<script>
-
-        formatting();
-        drawLines();
-        alert('test');
-		
-	</script>
 	
 
 </body>
