@@ -43,6 +43,7 @@
 		//Works, but really ugly. Think there's a better way to do this with toggle
 	});
 
+
 	$('span.collapse').on('click', function()
 	{
 		var $this = $(this);
@@ -64,6 +65,16 @@
 		else if( ($this.siblings().children().hasClass('off')) && $this.closest('ol').siblings().find('li').hasClass('on') )
 		{
 			$this.siblings().children().removeClass('off').addClass('on');
+		}
+		else if( $this.siblings().children().hasClass('on') )
+		{
+			//$this.siblings().children().removeClass('on').addClass('off');
+			$this.closest('ol').children().find('li.on').removeClass('on').addClass('off');
+		}
+		else if( $this.siblings().children().hasClass('off') )
+		{
+			//$this.siblings().children().removeClass('off').addClass('on');
+			$this.closest('ol').children().find('li.off').removeClass('off').addClass('on');
 		}
 	});
 
