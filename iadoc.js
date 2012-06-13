@@ -11,6 +11,10 @@
 			{
 				$this.before(collapse);
 			} 
+			else
+			{
+				$this.before('<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>')
+			}
 		});
 	}
 
@@ -35,5 +39,23 @@
 		$this.parent().children().children().toggle();
 
 		//Ugly, need to fix
+
+	});
+
+
+	$('.continuation').each(function(index)
+	{
+		$.fn.textWidth = function()
+		{
+			var html_org = $(this).html();
+			var html_calc = '<span>' + html_org + '</span>';
+			$(this).html(html_calc);
+			var width = $(this).find('span:first').width();
+			$(this).html(html_org);
+			return width;
+		}
+		var width = $(this).textWidth();
+
+		$(this).css('width', width);
 
 	});

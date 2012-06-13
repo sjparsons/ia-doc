@@ -47,7 +47,7 @@ li a:hover { background-color: #EDEDED; }
 	background-position: left center, right center;
 	height: 30px;
 	line-height: 30px;
-	width: 140px; /* Need to figure out width on this element */
+	padding-right: 60px;
 }
 .conditional-area
 {
