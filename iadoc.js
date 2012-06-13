@@ -32,7 +32,6 @@
 		}
 		//May remove this, not sure if necessary.
 		
-		//$this.parent().children().children().toggle();
 		if( $this.parent().children().children().hasClass('on') )
 		{
 			$this.parent().children().children().removeClass('on').addClass('off');
@@ -48,27 +47,24 @@
 	{
 		var $this = $(this);
 
-		if( ($this.siblings().children().hasClass('on')) && $this.closest('ol').siblings().children().children().children().hasClass('on') )
+		if( ($this.siblings().children().hasClass('on')) && $this.closest('ol').siblings().find('li').hasClass('on') )
 		{
 			$this.siblings().children().removeClass('on').addClass('off');
-			$this.closest('ol').siblings().children().children().children().removeClass('on').addClass('off');
+			$this.closest('ol').siblings().children().find('li').removeClass('on').addClass('off');
 		}
-		else if( ($this.siblings().children().hasClass('off')) && $this.closest('ol').siblings().children().children().children().hasClass('off') )
+		else if( ($this.siblings().children().hasClass('off')) && $this.closest('ol').siblings().find('li').hasClass('off') )
 		{
 			$this.siblings().children().removeClass('off').addClass('on');
-			$this.closest('ol').siblings().children().children().children().removeClass('off').addClass('on');
+			$this.closest('ol').siblings().children().find('li').removeClass('off').addClass('on');
 		}	
-		else if( ($this.siblings().children().hasClass('on')) && $this.closest('ol').siblings().children().children().children().hasClass('off') )
+		else if( ($this.siblings().children().hasClass('on')) && $this.closest('ol').siblings().find('li').hasClass('off') )
 		{
-			$this.closest('ol').siblings().children().children().children().removeClass('off').addClass('on');
+			$this.closest('ol').siblings().children().find('li').removeClass('off').addClass('on');
 		}
-		else if( ($this.siblings().children().hasClass('off')) && $this.closest('ol').siblings().children().children().children().hasClass('on') )
+		else if( ($this.siblings().children().hasClass('off')) && $this.closest('ol').siblings().find('li').hasClass('on') )
 		{
 			$this.siblings().children().removeClass('off').addClass('on');
 		}
-
-		//Worse looking than before, but levels work semi properly. Need to fix.
-
 	});
 
 
