@@ -72,3 +72,5 @@ li a:hover { background-color: #EDEDED; }
 	font-size: .7em;
 	height: .7em;
 }
+.on { display: list-item; }
+.off { display: none; }
