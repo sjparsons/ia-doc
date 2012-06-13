@@ -1,20 +1,14 @@
-li 
-{
-	list-style: none;
-	padding: 5px 0;
-}
+li { list-style: none; padding: 5px 0; }
+ol { display: block; margin-top: 1px; margin-right: 10px;}
+.collapse:hover { background-color: #EDEDED; }
+a:link { text-decoration: none; color: #000; }
+a:visited { color: #000; }
 a
 {
 	background-size: 30px 40px;
 	background-repeat: no-repeat;
 	background-position: left center;
 }
-a:link
-{
-	text-decoration: none;
-	color: #000;
-}
-a:visited { color: #000; }
 li a
 {
 	padding-left: 40px;
@@ -22,10 +16,7 @@ li a
 	height: 40px;
 	vertical-align: middle;
 }
-li a:hover
-{
-	background-color: #EDEDED;
-}
+li a:hover { background-color: #EDEDED; }
 .file
 {
 	background-image: url('imgs/file.svg');
@@ -56,25 +47,28 @@ li a:hover
 	background-position: left center, right center;
 	height: 30px;
 	line-height: 30px;
-	width: 140px; /*Need to figure out width on this element*/
+	width: 140px; /* Need to figure out width on this element */
 }
-ol { display: block; }
-.conditional_area
+.conditional-area
 {
 	border-radius: 20px;
 	border: 1px dashed #000;
-	border-radius: 10px;
 }
 .area
 {	
 	border-radius: 20px;
 	border: 1px solid #000;
 }
+.iterative-area 
+{
+	border-radius: 20px;
+	border: 1px double #000;
+	border-width: 3px;
+
+}
 .collapse
 {
 	cursor: default;
 	font-size: .7em;
 	height: .7em;
-}
-.collapse:hover { background-color: #EDEDED; }
 }
