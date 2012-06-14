@@ -88,7 +88,7 @@
 			$(this).html(html_org);
 			return width;
 		}
-		var width = $(this).textWidth();
+		var width = $(this).textWidth() * 1.13;
 
 		$(this).css('width', width);
 	});
