@@ -1,3 +1,18 @@
+/*
+	Title: IA-doc
+	Description: A system for creating information architecture docs
+		based on Jesse James Garrett's visual vocabulary 
+		http://www.jjg.net/ia/visvocab/
+	Authors: Matt Buresh, Sam Parsons
+
+*/
+
+@import url(http://fonts.googleapis.com/css?family=Gudea);
+
+body {
+	font-family: 'Gudea', sans-serif;
+}
+
 li { list-style: none; padding: 5px 0; }
 ol { display: block; margin-top: 1px; margin-right: 10px;}
 .collapse:hover { background-color: #EDEDED; }
