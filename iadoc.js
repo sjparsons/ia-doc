@@ -1,94 +1,38 @@
-	onLoad();
-	
-	function onLoad()
-	{
-		var collapse = '<span class="collapse">[-/+]</span>';
+	(function($){
 
-		$('a').each(function(index)
-		{
-			var $this = $(this);
-			if( $this.parent().find('li').length > 0 )
-			{
-				$this.before(collapse);
-			} 
-			else
-			{
-				$this.before('<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>')
-			}
+		// Children Toggling
+		$('.iadoc li').click(function(){
+			// hide children li's wheneve the current li is clicked.
+			$(this).children().children('li').toggle();
+			return false; // to stop the event bubbling up.
 		});
-
-		$('li').each(function(index)
-		{
-			$(this).addClass('on');
-		});
-	}
-
-	$('a').on('click', function(e)
-	{
-		var $this = $(this);
-		if( $this.attr('href') == "" || $this.attr('href') == 0 )
-		{
-			e.preventDefault();	
-		}
-		//May remove this, not sure if necessary.
 		
-		if( $this.parent().children().children().hasClass('on') )
-		{
-			$this.parent().children().children().removeClass('on').addClass('off');
-		}
-		else if( $this.parent().children().children().hasClass('off') )
-		{
-			$this.parent().children().children().removeClass('off').addClass('on');
-		}
-		//Works, but really ugly. Think there's a better way to do this with toggle
-	});
-
-
-	$('span.collapse').on('click', function()
-	{
-		var $this = $(this);
-
-		if( ($this.siblings().children().hasClass('on')) && $this.closest('ol').siblings().find('li').hasClass('on') )
-		{
-			$this.siblings().children().removeClass('on').addClass('off');
-			$this.closest('ol').siblings().children().find('li').removeClass('on').addClass('off');
-		}
-		else if( ($this.siblings().children().hasClass('off')) && $this.closest('ol').siblings().find('li').hasClass('off') )
-		{
-			$this.siblings().children().removeClass('off').addClass('on');
-			$this.closest('ol').siblings().children().find('li').removeClass('off').addClass('on');
-		}	
-		else if( ($this.siblings().children().hasClass('on')) && $this.closest('ol').siblings().find('li').hasClass('off') )
-		{
-			$this.closest('ol').siblings().children().find('li').removeClass('off').addClass('on');
-		}
-		else if( ($this.siblings().children().hasClass('off')) && $this.closest('ol').siblings().find('li').hasClass('on') )
-		{
-			$this.siblings().children().removeClass('off').addClass('on');
-		}
-		else if( $this.siblings().children().hasClass('on') )
-		{
-			$this.closest('ol').children().find('li.on').removeClass('on').addClass('off');
-		}
-		else if( $this.siblings().children().hasClass('off') )
-		{
-			$this.closest('ol').children().find('li.off').removeClass('off').addClass('on');
-		}
-	});
-
-
-	$('.continuation').each(function(index)
-	{
-		$.fn.textWidth = function()
-		{
-			var html_org = $(this).html();
-			var html_calc = '<span>' + html_org + '</span>';
-			$(this).html(html_calc);
-			var width = $(this).find('span:first').width();
-			$(this).html(html_org);
-			return width;
-		}
-		var width = $(this).textWidth() * 1.13;
-
-		$(this).css('width', width);
-	});
+		
+		// Level Toggling
+		$('.iadoc li').prepend('<button class="toggle" name="level_toggle" value="">toggle level</button>');
+		
+		$('button.toggle').hide().click(function(){
+			var show = $(this).val();										// hide or show?	
+			var cur_level_lis = $(this).parent().parent().children('li'); 	// get all li's at level above.
+			if (!show) {
+				cur_level_lis.children().children('li').hide(); 			// hide children of the current level
+				cur_level_lis.children('button.toggle').val('1');			// make button 'show' children next time.
+			}
+			else {
+				cur_level_lis.children().children('li').show();				// hide children of the current level
+				cur_level_lis.children('button.toggle').val('');			// reset button to 'hide' children next time.
+			}
+			return false;
+		});
+		
+		$('li').hover(
+			function(){ // Hover In
+				$(this).children('button.toggle').show();
+			},
+			function(){  // Hover Out
+				$(this).children('button.toggle').hide();
+			}
+		);
+		
+	})(jQuery); 
+	
