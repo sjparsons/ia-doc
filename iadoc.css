@@ -13,112 +13,111 @@ body {
 	font-family: 'Gudea', sans-serif;
 }
 
-li { 
-	list-style: none; 
-	padding: 5px 0; 
+.iadoc li { 
+	width: 100%;
 }
 
-ol { 
+.iadoc ol { 
 	display: block; 
 	margin-top: 1px; 
 	margin-right: 10px;
+	list-style: decimal;
 }
 
-.collapse:hover { 
-	background-color: #EDEDED; 
+.iadoc ol ol, .iadoc ul ol {
+	list-style: upper-alpha;
 }
 
-a:link { 
-	text-decoration: none; 
-	color: #000; 
+.iadoc ol ol ol, .iadoc ol ul ol, .iadoc ul ul ol {
+	list-style: decimal;
 }
 
-a:visited { 
-	color: #000; 
-}
-
-a {
-	background-size: 30px 40px;
-	background-repeat: no-repeat;
-	background-position: left center;
-}
-
-li a {
-	padding-left: 40px;
+.iadoc .file:before {
+	content: "";
 	display: inline-block;
-	height: 40px;
-	vertical-align: middle;
-}
-
-li a:hover { 
-	background-color: #EDEDED;
-}
-
-.file {
+	height: 30px;
+	width: 35px;
 	background-image: url('imgs/file.svg');
-	height: 30px;
-	line-height: 30px;
+	background-repeat: no-repeat;
+	background-size: 30px 40px;
+	vertical-align: -20%;
 }
 
-.page {
+.iadoc .page:before {
+	content: "";
+	display: inline-block;
+	height: 30px;
+	width: 35px;
 	background-image: url('imgs/page.svg');
-	height: 30px;
-	line-height: 30px;
+	background-repeat: no-repeat;
+	background-size: 30px 40px;
+	vertical-align: -20%;
 }
 
-.file-stack {
+.iadoc .file-stack:before {
+	content: "";
+	display: inline-block;
+	height: 35px;
+	width: 35px;
 	background-image: url('imgs/file-stack.svg');
-	height: 30px;
-	line-height: 30px;
+	background-repeat: no-repeat;
+	background-size: 30px 40px;
+	vertical-align: -20%;
 }
 
-.page-stack {
+.iadoc .page-stack:before {
+	content: "";
+	display: inline-block;
+	height: 30px;
+	width: 35px;
 	background-image: url('imgs/page-stack.svg');
-	height: 30px;
-	line-height: 30px;
+	background-repeat: no-repeat;
+	background-size: 30px 40px;
+	vertical-align: -20%;
 }
 
-.continuation {
-	background-image: url('imgs/continue-left.svg'), url('imgs/continue-right.svg');
-	background-position: left center, right center;
+.iadoc .continuation:before {
+	content: "";
+	display: inline-block;
 	height: 30px;
-	line-height: 30px;
-	padding-right: 60px;
+	width: 35px;
+	background-image: url('imgs/continue-left.svg');
+	background-repeat: no-repeat;
+	background-size: 30px 40px;
+	vertical-align: -20%;
 }
 
-.conditional-area {
+.iadoc .continuation:after {
+	content: "";
+	display: inline-block;
+	height: 30px;
+	width: 35px;
+	margin-left: 25px;
+	background-image: url('imgs/continue-right.svg');
+	background-repeat: no-repeat;
+	background-size: 30px 40px;
+	vertical-align: -20%;
+}
+
+.iadoc .conditional-area {
 	border-radius: 20px;
 	border: 1px dashed #000;
-	padding: 3px;
-	margin-top: 2px;
+	padding: 0 0 7px 5px;
+	margin: 2px 0 0 40px;
 }
 
-.area {	
+.iadoc .area {	
 	border-radius: 20px;
 	border: 1px solid #000;
-	padding: 3px;
-	margin-top: 2px;
+	padding: 0 0 7px 5px;
+	margin: 2px 0 0 40px;
 }
 
-.iterative-area {
+.iadoc .iterative-area {
 	border-radius: 20px;
 	border: 1px double #000;
 	border-width: 3px;
-	padding: 3px;
-	margin-top: 2px;
+	padding: 0 0 7px 5px; 
+	margin: 2px 0 0 40px;
 
-}
-
-.collapse {
-	cursor: default;
-	font-size: .7em;
-	height: .7em;
-}
-
-.on { 
-	display: list-item;
-}
-
-.off { 
-	display: none;
 }
