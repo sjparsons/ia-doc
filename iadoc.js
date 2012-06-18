@@ -16,22 +16,23 @@
 		});
 		
 		// Level Toggling
-		$('.iadoc li').prepend('<button class="toggle" name="level_toggle" value="">toggle level</button>');
+		$('.iadoc li').prepend('<button class="toggle" name="level_toggle" value="">-</button>');
 		
-		$('button.toggle').hide().click(function(){
-			var show = $(this).val();										// hide or show?	
-			var cur_level_lis = $(this).parent().parent().children('li'); 	// get all li's at level above.
+		$('button.toggle').show().click(function(){
+			var show = $(this).val();												// hide or show?	
+			var cur_level_lis = $(this).parent().parent().children('li'); 			// get all li's at level above.
 			if (!show) {
-				cur_level_lis.children().children('li').hide(); 			// hide children of the current level
-				cur_level_lis.children('button.toggle').val('1');			// make button 'show' children next time.
+				cur_level_lis.children().children('li').hide(); 					// hide children of the current level
+				cur_level_lis.children('button.toggle').val('1').text('+');			// make button 'show' children next time.
 			}
 			else {
-				cur_level_lis.children().children('li').show();				// hide children of the current level
-				cur_level_lis.children('button.toggle').val('');			// reset button to 'hide' children next time.
+				cur_level_lis.children().children('li').show();						// hide children of the current level
+				cur_level_lis.children('button.toggle').val('').text('-');			// reset button to 'hide' children next time.
 			}
 			return false;
 		});
 		
+		/*
 		$('li').hover(
 			function(){ // Hover In
 				$(this).children('button.toggle').show();
@@ -40,6 +41,7 @@
 				$(this).children('button.toggle').hide();
 			}
 		);
+		*/
 		
 	})(jQuery); 
 	
