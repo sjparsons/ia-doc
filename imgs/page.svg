@@ -52,11 +52,14 @@
      inkscape:groupmode="layer"
      id="layer1">
     <rect
-       style="fill:none;stroke:#000000;stroke-width:13;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       style="fill:none;stroke:#666;stroke-width:50;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        id="rect3886"
        width="600"
        height="431.42856"
        x="67.14286"
-       y="316.64789" />
+       y="316.64789">
+		
+	</rect>
+	<line x1="67.14286" x2="667.14286" y1="410.64789" y2="410.64789" style="stroke:#666;stroke-width:50;stroke-opacity:1;"/>
   </g>
 </svg>
