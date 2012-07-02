@@ -1,21 +1,21 @@
 <html>
 <head>
 	<title>Test 3</title>
-	<LINK rel="stylesheet" type="text/css" href="../iadoc.css" /> 
+	<LINK rel="stylesheet" type="text/css" href="../iadoc.css" />
 </head>
 
 <body>
 
 	<div class="iadoc">
-	
-	<h1>Root</h1>	
-		
+
+	<h1>Root</h1>
+
 	<ol>
 		<li>Page Stack 1</li>
 
 		<li class="page">Page 1
 			<ol class="area">
-				<li class="page">File 2</li>
+				<li class="file">File 2</li>
 				<li class="file">File 3</li>
 			</ol>
 		</li>
@@ -30,14 +30,14 @@
 								<li class="page">Testing</li>
 								<li>Testing
 									<ol class="conditional-area">
-										<li class="continuation">Testing</li>
+										<li class="conditional">[ Testing ]</li>
 										<li class="page">Testing</li>
 										<li class="page">Testing</li>
 									</ol>
 								</li>
 								<li class="page">Testing
 									<ol class="iterative-area">
-										<li class="page">Testing</li>
+										<li class="page-stack">Testing</li>
 										<li class="page">Testing</li>
 										<li class="page">Testing</li>
 									</ol>
@@ -53,7 +53,7 @@
 		<li class="file-stack">File Stack 1</li>
 		<li class="page">Page 2</li>
 
-		<li class="continuation">From Page 5</li>
+		<li class="continuation">[ From Page 5 ]</li>
 		<li>Final Item
 			<ol>
 				<li class="page">Page 6</li>
@@ -61,12 +61,12 @@
 			</ol>
 		</li>
 	</ol>
-	
+
 	</div>
 
 	<script src="../jquery-1.7.2.min.js"></script>
 	<script src="../iadoc.js"></script>
-	
+
 
 </body>
 </html>
