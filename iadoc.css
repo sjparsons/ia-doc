@@ -1,7 +1,7 @@
 /*
 	Title: IA-doc
 	Description: A system for creating information architecture docs
-		based on Jesse James Garrett's visual vocabulary 
+		based on Jesse James Garrett's visual vocabulary
 		http://www.jjg.net/ia/visvocab/
 	Authors: Matt Buresh, Sam Parsons
 
@@ -13,13 +13,13 @@ body {
 	font-family: 'Lato', sans-serif;
 }
 
-.iadoc li { 
-	width: 100%;
+.iadoc li:hover {
+	cursor: default;
 }
 
-.iadoc ol { 
-	display: block; 
-	margin-top: 1px; 
+.iadoc ol {
+	display: block;
+	margin-top: 1px;
 	margin-right: 10px;
 	list-style: decimal;
 }
@@ -32,92 +32,44 @@ body {
 	list-style: decimal;
 }
 
-.iadoc .file:before {
-	content: "";
-	display: inline-block;
-	height: 30px;
-	width: 35px;
+.iadoc li {
+	padding: 8px 0 1px 30px;
+	background-repeat: no-repeat;
+	background-size: 30px 40px;
+
+}
+
+.iadoc .file {
 	background-image: url('imgs/file.svg');
-	background-repeat: no-repeat;
-	background-size: 30px 40px;
-	vertical-align: -20%;
 }
 
-.iadoc .page:before {
-	content: "";
-	display: inline-block;
-	height: 30px;
-	width: 35px;
+.iadoc .page {
 	background-image: url('imgs/page.svg');
-	background-repeat: no-repeat;
-	background-size: 30px 40px;
-	vertical-align: -20%;
 }
 
-.iadoc .file-stack:before {
-	content: "";
-	display: inline-block;
-	height: 35px;
-	width: 35px;
+.iadoc .file-stack {
 	background-image: url('imgs/file-stack.svg');
-	background-repeat: no-repeat;
-	background-size: 30px 40px;
-	vertical-align: -20%;
 }
 
-.iadoc .page-stack:before {
-	content: "";
-	display: inline-block;
-	height: 30px;
-	width: 35px;
+.iadoc .page-stack {
 	background-image: url('imgs/page-stack.svg');
-	background-repeat: no-repeat;
-	background-size: 30px 40px;
-	vertical-align: -20%;
-}
-
-.iadoc .continuation:before {
-	content: "";
-	display: inline-block;
-	height: 30px;
-	width: 35px;
-	background-image: url('imgs/continue-left.svg');
-	background-repeat: no-repeat;
-	background-size: 30px 40px;
-	vertical-align: -20%;
-}
-
-.iadoc .continuation:after {
-	content: "";
-	display: inline-block;
-	height: 30px;
-	width: 35px;
-	margin-left: 25px;
-	background-image: url('imgs/continue-right.svg');
-	background-repeat: no-repeat;
-	background-size: 30px 40px;
-	vertical-align: -20%;
 }
 
 .iadoc .conditional-area {
 	border-radius: 20px;
 	border: 1px dashed #000;
-	padding: 0 0 7px 5px;
-	margin: 2px 0 0 40px;
+	padding: 7px 0 10px 30px;
 }
 
-.iadoc .area {	
+.iadoc .area {
 	border-radius: 20px;
 	border: 1px solid #000;
-	padding: 0 0 7px 5px;
-	margin: 2px 0 0 40px;
+	padding: 7px 0 10px 30px;
 }
 
 .iadoc .iterative-area {
 	border-radius: 20px;
 	border: 1px double #000;
 	border-width: 3px;
-	padding: 0 0 7px 5px; 
-	margin: 2px 0 0 40px;
-
+	padding: 7px 0 10px 30px;
 }
