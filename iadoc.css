@@ -33,7 +33,7 @@ body {
 }
 
 .iadoc li {
-	padding: 8px 0 1px 30px;
+	padding: 8px 0 4px 30px;
 	background-repeat: no-repeat;
 	background-size: 30px 40px;
 
@@ -54,22 +54,28 @@ body {
 .iadoc .page-stack {
 	background-image: url('imgs/page-stack.svg');
 }
+.iadoc .continuation {
+	padding-left: 1px;
+}
 
 .iadoc .conditional-area {
 	border-radius: 20px;
 	border: 1px dashed #000;
-	padding: 7px 0 10px 30px;
+	padding: 10px 0 15px 35px;
+	margin-top: 10px;
 }
 
 .iadoc .area {
 	border-radius: 20px;
 	border: 1px solid #000;
-	padding: 7px 0 10px 30px;
+	padding: 10px 0 15px 35px;
+	margin-top: 10px;
 }
 
 .iadoc .iterative-area {
 	border-radius: 20px;
-	border: 1px double #000;
+	border: 10px double #000;
 	border-width: 3px;
-	padding: 7px 0 10px 30px;
+	padding: 10px 0 15px 35px;
+	margin-top: 10px;
 }
