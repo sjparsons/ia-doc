@@ -25,13 +25,13 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.7"
-     inkscape:cx="369.96677"
+     inkscape:cx="117.10963"
      inkscape:cy="518.13718"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="751"
-     inkscape:window-height="828"
+     inkscape:window-width="1094"
+     inkscape:window-height="959"
      inkscape:window-x="164"
      inkscape:window-y="60"
      inkscape:window-maximized="0" />
@@ -52,11 +52,16 @@
      inkscape:groupmode="layer"
      id="layer1">
     <rect
-       style="fill:none;stroke:#000000;stroke-width:13;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       style="fill:none;stroke:#000000;stroke-width:25;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        id="rect3886"
        width="600"
        height="431.42856"
        x="67.14286"
        y="316.64789" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 68.571429,422.36218 595.714281,0"
+       id="path3792"
+       inkscape:connector-curvature="0" />
   </g>
 </svg>
